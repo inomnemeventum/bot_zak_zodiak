@@ -141,4 +141,4 @@ if __name__ == "__main__":
     print("Запускаю бот...")
     total, _ = load_user_count()
     print(f"Текущее количество пользователей: {total}")
-    bot.polling(none_stop=True)
+    bot.infinity_polling(logger_level=logging.INFO)
