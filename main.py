@@ -141,11 +141,12 @@ if __name__ == "__main__":
     print("Запускаю бот...")
     total, _ = load_user_count()
     print(f"Текущее количество пользователей: {total}")
-    try:
-        bot.infinity_polling(logger_level=logging.INFO)
-        break
-    except ReadTimeout as timeoutError:
-            print(f"Ошибка при работе бота: {timeoutError}")
-    except Exception as e:
-            print(f"Ошибка при работе бота: {e}")
+    while True:
+        try:
+            bot.infinity_polling(logger_level=logging.INFO)
+            break
+        except ReadTimeout as timeoutError:
+                print(f"Ошибка при работе бота: {timeoutError}")
+        except Exception as e:
+                print(f"Ошибка при работе бота: {e}")
         
