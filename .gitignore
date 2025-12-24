@@ -1,0 +1,5 @@
+.venv
+__pycache__
+.vscode
+bot_users.txt
+my_secrets_.py
