@@ -1,4 +1,5 @@
 import logging
+from requests import ReadTimeout
 import telebot # Импортируем telebot
 from my_secrets_ import secrets
 from telegram.ext import ApplicationBuilder, CallbackQueryHandler, ContextTypes
